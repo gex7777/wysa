@@ -26,34 +26,45 @@ For a User
 ```c
 {
     id:"document_id",
-  nickname: {
-        type: String,
+    nickname: {
+        type: string,
         unique: true,
         required: true
-    },
-    form_answers:[
-        {step:{
-             type: number,
-        unique: true,
-        required: true
+        },
+    form_answers:{
+      type:array,
+      unique:true,
+      required:false,
+      arrayItem:{step:{
+            type: number,
+            unique: true,
+            required: true
         },
         question:{
-                 type: string,
-        unique: true,
-        required: true
+            type: string,
+            unique: true,
+            required: true
         }.
-        answers:[{option_number:{
-             type: number,
-        unique: true,
-        required: true
-        },
-        option:{
-                      type: string,
-        unique: true,
-        required: true
-        }}]
-        }
-    ]
+        answers:{
+            type:array,
+            unique:true,
+            required:false,
+            arrayItem:{
+            {option_number:{
+              type: number,
+              unique: true,
+              required: true
+              },
+            option:{
+              type: string,
+              unique: true,
+              required: true
+              }
+            }
+            }
+            }
+            }
+    }
 }
 ```
 
@@ -75,9 +86,13 @@ For a Form FLow Entity
      subQuestion: {
         type: number,
         unique: true,
-        required: true
+        required: false
     },
-    options:[{
+    options:{
+        type:array,
+        unique:true,
+        required:false,
+        arrayItem:{
         number:{
                 type: number,
         unique: true,
@@ -88,6 +103,7 @@ For a Form FLow Entity
         unique: true,
         required: true
         }
-}]
+        }
+}
 }
 ```
