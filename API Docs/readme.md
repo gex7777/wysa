@@ -1,8 +1,5 @@
 # WYSA SLEEP RESTAPI DOCS
 
-Where full URLs are provided in responses they will be rendered as if service
-is running on 'http://testserver/'.
-
 ## Open Endpoints
 
 Open endpoints require no Authentication.
