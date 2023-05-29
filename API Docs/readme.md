@@ -9,7 +9,7 @@ Open endpoints require no Authentication.
 ## Endpoints that require Authentication
 
 Closed endpoints require a valid Token to be included in the header of the
-request. A Token can be acquired from the Login view above.
+request. A Token can be acquired from the Signup view above.
 
 ### Form Flow related
 
