@@ -1,4 +1,4 @@
-# Login
+# Signup
 
 Used to collect a Token for a registered User.
 
